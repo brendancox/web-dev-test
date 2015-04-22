@@ -1,0 +1,38 @@
+<h1 class="text-center">Web Dev Test</h1>
+<h3 class="text-center">Calculate the cost of your holiday.</h3>
+
+<%= form_tag("form", id: "cost_form") do %>
+
+	<div class="form-group">
+		<%= label :leave_date, "What date do you leave?" %>
+		<%= date_field :form, :leave_date, class: "form-control" %>
+	</div>
+
+	<div class="form-group">
+		<%= label :leave_cost, "Cost of flight there:" %>
+		<%= number_field :form, :leave_cost, class: "form-control" %>
+	</div>
+
+	<div class="form-group">
+		<%= label :return_date, "What date do you return?" %>
+		<%= date_field :form, :return_date, class: "form-control" %>
+	</div>
+
+	<div class="form-group">
+		<%= label :return_cost, "Cost of flight back:" %>
+		<%= number_field :form, :return_cost, class: "form-control" %>
+	</div>
+
+	<div class="form-group">
+		<%= label :accom_cost, "Nightly cost of accommodation:" %>
+		<%= number_field :form, :accom_cost, class: "form-control" %>
+	</div>
+
+	<div class="form-group">
+		<%= submit_tag "Calculate", type: 'button', class: 'btn btn-default', id: 'submit_form' %>
+	</div>
+
+<% end %> 
+
+<div class="response">
+</div>
